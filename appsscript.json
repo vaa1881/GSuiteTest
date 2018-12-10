@@ -1,0 +1,33 @@
+{
+  "timeZone": "America/Los_Angeles",
+  "dependencies": {
+    "libraries": [{
+      "userSymbol": "OAuth2",
+      "libraryId": "1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF",
+      "version": "31",
+      "developmentMode": true
+    }, {
+      "userSymbol": "Moment",
+      "libraryId": "1n7mZTopxxcAxRC1Aqo6SJJw81VfsGys41VJ_3uui1m8F0QwtJQ_Q_E-Q",
+      "version": "5",
+      "developmentMode": true
+    }]
+  },
+  "oauthScopes": ["https://www.googleapis.com/auth/gmail.addons.execute", "https://www.googleapis.com/auth/gmail.addons.current.message.metadata", "https://www.googleapis.com/auth/gmail.modify", "https://www.googleapis.com/auth/script.external_request", "https://www.googleapis.com/auth/userinfo.email"],
+  "gmail": {
+    "name": "Workfront",
+    "logoUrl": "https://gsuite.ngrok.io/images/workfront-lion.png",
+    "contextualTriggers": [{
+      "unconditional": {
+      },
+      "onTriggerFunction": "buildAddOn"
+    }],
+    "universalActions": [{
+      "text": "Logout",
+      "runFunction": "logout"
+    }],
+    "primaryColor": "#4285F4",
+    "secondaryColor": "#4285F4",
+    "openLinkUrlPrefixes": ["https://mail.google.com/", "https://*.ngrok.io/", "https://*.wfbridge.net/", "https://*.workfront.com/"]
+  }
+}
